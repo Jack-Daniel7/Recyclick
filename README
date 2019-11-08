@@ -1,0 +1,7 @@
+para que funcione debe ser ejecutado en xampp y debe ser almacenado en el directorio htdocs 
+dentro de esa carpeta se debe crear otra que se llame Recyclick en ella se colocan los archivos
+que esta en la rama original, de manera que quede organizado asi Recyclick://css,js,php,index 
+
+for it to work it must be execute in xampp and be stored in htdocs carpet insde this folder you will be create another one that
+Recyclick's name, in this folder the files of the master branch its stored.
+
