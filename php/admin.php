@@ -88,7 +88,7 @@ elseif ($_SESSION['rol']==0) {
 						<div class="box">
   								<div class="container-3">
 							  		<span class="icon"><i class="fa fa-search"></i></span>
-							  		<a href="../php/agregaroperario.php" class="iconadd"><i class="fas fa-user-plus"></i></a>
+			
       								<input type="search" name="caja_busqueda_cliente" id="caja_busqueda_cliente" placeholder="Search..."/>
   								</div>
 							</div>
@@ -103,10 +103,10 @@ elseif ($_SESSION['rol']==0) {
 		
 				   <?php
 					   require("connect_db.php");
-					   $sql=("SELECT * FROM operario");
+					   $sql=("SELECT * FROM cliente");
 					   $query=mysqli_query($mysqli,$sql);
 					   extract($_GET);
-					   if(@$idb==2){
+					   if(@$idb==3){
 						   $sqlbo="UPDATE `login` SET `state` = '0' WHERE `login`.`identificacion` = '$id'";
 						   $resbo=mysqli_query($mysqli,$sqlbo);
 						   echo '<script>alert("USUARIO INHABILITADO")</script> ';

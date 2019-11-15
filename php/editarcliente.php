@@ -15,7 +15,7 @@
 		extract($_GET);
 		require("connect_db.php");
 
-		$sql="SELECT * FROM operario WHERE identificacion=$id";
+		$sql="SELECT * FROM cliente WHERE identificacion=$id";
 	//la variable  $mysqli viene de connect_db que lo traigo con el require("connect_db.php");
         $ressql=mysqli_query($mysqli,$sql);
 		while ($row=mysqli_fetch_row ($ressql)){
@@ -23,9 +23,11 @@
 		    	$name=$row[1];
 		    	$lastname=$row[2];
                 $identificacion=$row[3];
-		    	$route=$row[5];
-				$vehicle=$row[6];
-				$telephone=$row[7];
+		    	$quantity=$row[4];
+                $date=$row[5];
+                $address=$row[6];
+                $telephone=$row[7];
+				$email=$row[8];
 		    }
 
 
@@ -57,21 +59,24 @@
           <input type="text" name="pass" value="<?php echo $lastname?>">
         </div>
         <div class="field-wrap">
-          <label id="actualizar">Identificación<span class="req"></span></label>
-          <input type="text" name="email" value="<?php echo $identificacion?>">
+          <label id="actualizar">Cantidad Reciclada<span class="req"></span></label>
+          <input type="text" name="email" value="<?php echo $quantity?>">
         </div>
         <div class="field-wrap">
-          <label id="actualizar">Telefono<span class="req"></span></label>
-          <input type="text" name="pasadmin" value="<?php echo $telephone?>">
+          <label id="actualizar">Fecha de Afiliación<span class="req"></span></label>
+          <input type="text" name="pasadmin" value="<?php echo $date?>">
         </div>
         <div class="field-wrap">
-          <label id="actualizar">Ruta<span class="req"></span></label>
-          <input type="text" name="rol" value="<?php echo $route?>">
+          <label id="actualizar">Dirección<span class="req"></span></label>
+          <input type="text" name="rol" value="<?php echo $address?>">
          </div>
         <div class="field-wrap">
-          <label id="actualizar">Vehiculo<span class="req"></span></label>
-          <input type="text" name="estado" value="<?php echo $vehicle?>">
-    
+          <label id="actualizar">telefono<span class="req"></span></label>
+          <input type="text" name="estado" value="<?php echo $telephone?>">
+        </div>
+        <div class="field-wrap">
+          <label id="actualizar">email<span class="req"></span></label>
+          <input type="text" name="rol" value="<?php echo $email?>">
           <button type="submit" class="button button-block">Guardar</button>
           </div>	
 		</form>

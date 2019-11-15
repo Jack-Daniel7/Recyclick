@@ -157,8 +157,8 @@ if(isset($_POST['consulta1']) ){
     					<td>".$fila1['address']."</td>
 						<td>".$fila1['telephone']."</td>
 						<td>".$fila1['email']."</td>
-						<td><a href='../php/actualizaroperario.php?id=".$fila1['identificacion']."'><img src='../media/actualizado.png' class='img-rounded'></td>
-					    <td><a href='../php/admin.php?id=".$fila1['email']."&idb=2'><img src='../media/delete.png' class='img-rounded'></a></td>
+						<td><a href='../php/editarcliente.php?id=".$fila1['identificacion']."'><img src='../media/actualizado.png' class='img-rounded'></td>
+					    <td><a href='../php/admin.php?id=".$fila1['identificacion']."&idb=3'><img src='../media/delete.png' class='img-rounded'></a></td>
     				  </tr>";
 
     													}
@@ -222,7 +222,7 @@ function rutas(){
 					<td>".$fila1['lat']."</td>
 					<td>".$fila1['longtd']."</td>
 					<td><a href='../php/actualizaroperario.php?id=".$fila1['serie']."'><img src='../media/actualizado.png' class='img-rounded'></td>
-					<td><a href='../php/admin.php?id=".$fila1['serie']."&idb=2'><img src='../media/delete.png' class='img-rounded'></a></td>
+					<td><a href='../php/admin.php?id=".$fila1['serie']."&idb=4'><img src='../media/delete.png' class='img-rounded'></a></td>
 				  </tr>";
 
 													}
@@ -285,7 +285,7 @@ function rutas(){
 						<td>".$fila1['peso']."</td>
 						<td>".$fila1['comentarios']."</td>
 						<td><a href='../php/actualizaroperario.php?id=".$fila1['peso']."'><img src='../media/actualizado.png' class='img-rounded'></td>
-						<td><a href='../php/admin.php?id=".$fila1['peso']."&idb=2'><img src='../media/delete.png' class='img-rounded'></a></td>
+						<td><a href='../php/admin.php?id=".$fila1['peso']."&idb=5'><img src='../media/delete.png' class='img-rounded'></a></td>
 					  </tr>";
 	
 														}
