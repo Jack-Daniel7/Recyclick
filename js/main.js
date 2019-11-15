@@ -1,6 +1,6 @@
 $(buscar_datos());
 
-var parametro = "consulta1";
+
 
 function buscar_datos(consulta,parametro){
 	$.ajax({
@@ -23,13 +23,16 @@ function buscar_datos(consulta,parametro){
 		else if(parametro=="consulta3"){
 			$("#datos_recompensas").html(respuesta);
 		}
+		else if(parametro=="agregarruta"){
+			$("#agregarruta").html(respuesta);
+		}
 	})
 	.fail(function(){
 		console.log("error");
 	});
 }
 
-
+/*eventos que administra cambios en las cajas de texto de busqueda en la pagina admin*/
 
 $(document).on('keyup','#caja_busqueda', function(){
 	var valor = $(this).val();
@@ -72,3 +75,11 @@ $(document).on('keyup','#caja_busqueda_recompensas', function(){
 	}
 });
 
+$(document).ready(function(){
+	$("#prueba").click(function(){
+		alert('Evento click sobre un input text con nombre="nombre1"');
+	});
+});
+$(document).on('click','.iconadd', function(){
+console.log("prueba icono");
+});

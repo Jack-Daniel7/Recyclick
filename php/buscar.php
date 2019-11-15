@@ -20,13 +20,14 @@ if(isset($_POST['consulta1']) ){
 		case 'consulta3':
 			recompensas();
 			break;
+
 		}
 
 			
 }
 
 
-
+	
 	function operarios(){
 		error_reporting(E_ALL ^ E_NOTICE);
 	$servername = "localhost";

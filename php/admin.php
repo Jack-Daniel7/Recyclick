@@ -118,18 +118,20 @@ elseif ($_SESSION['rol']==0) {
 			
 		</section>
 		<section class="section tres">
-			<h2> Administración de Rutas</h2>
+			<h2 id="prueba"> Administración de Rutas</h2>
 					<h4>Lista de Rutas</h4>
 					<div class="box">
   						<div class="container-3">
-							  <span class="iconruta"><i class="fa fa-search"></i></span>
-							  <a href="../php/agregaroperario.php" class="iconaddruta"><i class="fas fa-user-plus"></i></a>
+							  <span class="iconruta" ><i class="fa fa-search"></i></span>
+							  <a href="#"  class="iconaddruta" id="prueba" ><i  class="fas fa-user-plus"></i></a>
       						<input type="search" name="caja_busqueda_rutas" id="caja_busqueda_rutas" placeholder="Search..." />
   						</div>
 					</div>
 					
 				
 					<div id="datos_rutas"></div>
+					
+
 		
 				   <?php
 					   require("connect_db.php");
